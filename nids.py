@@ -35,9 +35,9 @@ def handle_connection(client_socket, addr):
 # Function to block an IP address using firewall rules
 def block_ip(ip):
 # Example command for iptables on Linux
-    subprocess.run(['iptables', '-A', 'INPUT', '-s', ip, '-j', 'DROP'])
+#subprocess.run(['iptables', '-A', 'INPUT', '-s', ip, '-j', 'DROP'])
 # Example command for Windows Firewall
-# subprocess.run(['netsh', 'advfirewall', 'firewall', 'add', 'rule', 'name="Block ' + ip + '"', 'dir=in', 'action=block', 'remoteip=' + ip])
+    subprocess.run(['netsh', 'advfirewall', 'firewall', 'add', 'rule', 'name="Block ' + ip + '"', 'dir=in', 'action=block', 'remoteip=' + ip])
 
 # Function to listen for incoming connections
 def start_server():
